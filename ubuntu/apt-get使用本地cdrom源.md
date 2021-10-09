@@ -7,4 +7,5 @@ mount -t iso9660 -o loop /dev/sr0 /media/cdrom (或者：mount -t auto /dev/cdro
 sudo apt-cdrom -m -d=/media/cdrom add
 
 #查看apt源地址, 可以将在线源删除，仅保留本地源
-cat /etc/apt/sources.list```
+cat /etc/apt/sources.list
+```
