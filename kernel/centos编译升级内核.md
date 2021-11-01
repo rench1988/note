@@ -3,8 +3,9 @@
 ```tar xvf linux-5.6.9.tar```
 
 ### 2. 配置内核feature
-```cd linux-5.6.9```
-```cp -v /boot/config-$(uname -r) .config```
+```cd linux-5.6.9
+   cp -v /boot/config-$(uname -r) .config
+```
 
 ### 3. 安装compiler和其它工具
 ```yum group install "Development Tools"```
