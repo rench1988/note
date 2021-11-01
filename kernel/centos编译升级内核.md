@@ -1,6 +1,8 @@
 ### 1. 下载源码
-```wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.9.tar.sign```
-```tar xvf linux-5.6.9.tar```
+```console
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.9.tar.sign
+tar xvf linux-5.6.9.tar
+```
 
 ### 2. 配置内核feature
 ```cd linux-5.6.9
