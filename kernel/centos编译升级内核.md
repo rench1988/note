@@ -1,3 +1,5 @@
+[原文链接](https://www.cyberciti.biz/tips/compiling-linux-kernel-26.html)
+
 ### 1. 下载源码
 ```console
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.6.9.tar.sign
