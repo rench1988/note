@@ -5,10 +5,8 @@ kernel.core_pattern = |/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h %e
 ```
 
 配置文件名的可用指示符
->%%  a single % character
-
->%p  PID of dumped process
-
+>%%  a single % character  
+>%p  PID of dumped process  
 >%u  (numeric) real UID of dumped process
 
 >%g  (numeric) real GID of dumped process
