@@ -16,3 +16,13 @@ kernel.core_pattern = |/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h %e
 %c  core file size soft resource limit of crashing process (since Linux 2.6.24)  
 
 
+### 配置core文件名
+```console
+# sysctl -w kernel.core_pattern="%e-%t.core"
+```
+
+将配置持久化
+```console
+# echo 'kernel.core_pattern="%e-%t.core"' >> /etc/sysctl.conf
+# sysctl -p
+```
