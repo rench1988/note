@@ -1,5 +1,6 @@
 #### 语法
 >grep [options] pattern [files]
+
 >Options Description
 -c : This prints only a count of the lines that match a pattern
 -h : Display the matched lines, but do not display the filenames.
