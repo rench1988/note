@@ -21,7 +21,7 @@
 
 #### 示例
 ```console
-$cat > geekfile.txt  
+$ cat > geekfile.txt  
 unix is great os. unix is opensource. unix is free os.  
 learn operating system.  
 Unix linux which one you choose.  
@@ -30,7 +30,7 @@ uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
 
 1. 忽略大小写
 ```console
-$grep -i "UNix" geekfile.txt  
+$ grep -i "UNix" geekfile.txt  
 unix is great os. unix is opensource. unix is free os.
 Unix linux which one you choose.
 uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
@@ -38,13 +38,13 @@ uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
 
 2. 查询匹配的行数
 ```console
-$grep -c "unix" geekfile.txt
+$ grep -c "unix" geekfile.txt
 2
 ```
 
 3. 查询包含模式的文件名
 ```console
-$grep -l "unix" geekfile.txt f1.txt f2.txt f3.xt f4.txt
+$ grep -l "unix" geekfile.txt f1.txt f2.txt f3.xt f4.txt
 geekfile.txt
 ```
 
