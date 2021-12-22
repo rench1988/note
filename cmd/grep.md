@@ -1,3 +1,5 @@
+[原文](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+
 #### 语法
 >grep [options] pattern [files]
 
@@ -34,3 +36,46 @@ Unix linux which one you choose.
 uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
 ```
 
+2. 查询匹配的行数
+```console
+$grep -c "unix" geekfile.txt
+2
+```
+
+3. 查询包含模式的文件名
+```console
+$grep -l "unix" geekfile.txt f1.txt f2.txt f3.xt f4.txt
+geekfile.txt
+```
+
+4. 仅匹配whole word
+```console
+$ grep -w "unix" geekfile.txt
+unix is great os. unix is opensource. unix is free os.
+uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+```
+
+5. 仅打印匹配的模式部分
+```console
+$ grep -o "unix" geekfile.txt
+unix
+unix
+unix
+unix
+unix
+unix
+```
+
+6. 打印匹配行所在的行数
+```console
+$ grep -n "unix" geekfile.txt
+1:unix is great os. unix is opensource. unix is free os.
+4:uNix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+```
+
+7. 打印不匹配的行
+```console
+$ grep -v "unix" geekfile.txt
+learn operating system.
+Unix linux which one you choose.
+```
