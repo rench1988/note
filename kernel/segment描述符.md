@@ -7,4 +7,8 @@
 ### 段描述符
 ![段描述符](https://i.stack.imgur.com/UnPpx.png)
 
+### tss
+![tss](http://i.imgur.com/CONkZ9S.png)
 
+### tss描述符
+![tss描述符](http://i.imgur.com/iHUaIqR.png)
