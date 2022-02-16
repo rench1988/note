@@ -9,6 +9,8 @@ yum provides "*/zlib"
 ```
 
 #### centos8修改yum源
+建议先备份 /etc/yum.repos.d/ 内的文件。 
+需要确定您所需要的小版本，如无特殊需要则使用该大版本的最后一个小版本，比如 6.10，5.11，我们将其标记为 $minorver，需要您在之后的命令中替换。
 ```console
 minorver=8.5.2111
 sudo sed -e "s|^mirrorlist=|#mirrorlist=|g" \
