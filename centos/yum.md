@@ -7,3 +7,13 @@ yum list installed
 ```console
 yum provides "*/zlib"
 ```
+
+#### centos8修改yum源
+```console
+minorver=8.5.2111
+sudo sed -e "s|^mirrorlist=|#mirrorlist=|g" \
+         -e "s|^#baseurl=http://mirror.centos.org/\$contentdir/\$releasever|baseurl=https://mirrors.tuna.tsinghua.edu.cn/centos-vault/$minorver|g" \
+         -i.bak \
+         /etc/yum.repos.d/CentOS-*.repo
+sudo yum makecache
+```
