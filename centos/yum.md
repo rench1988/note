@@ -19,3 +19,29 @@ sudo sed -e "s|^mirrorlist=|#mirrorlist=|g" \
          /etc/yum.repos.d/CentOS-*.repo
 sudo yum makecache
 ```
+
+#### 安装时默认选"y"
+```console
+# yum -y install xxx
+# yum -y remove xxx
+```
+
+#### 更新
+```console
+# yum update xxx
+```
+
+#### List Enabled Yum Repositories
+```console
+# yum repolist
+```
+
+#### List all Enabled and Disabled Yum Repositories
+```console
+# yum repolist all
+```
+
+#### Install a Package from a Specific Repository
+```console
+# yum --enablerepo=epel install xxx
+```
