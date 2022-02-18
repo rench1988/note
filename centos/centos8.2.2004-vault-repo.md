@@ -1,5 +1,4 @@
->
-[base-source]
+>[base-source]
 name=CentOS-8.2.2004 - Base Sources
 baseurl=http://vault.centos.org/8.2.2004/BaseOS/Source/
 gpgcheck=1
