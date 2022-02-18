@@ -3,8 +3,7 @@ name=CentOS-8.2.2004 - Base Sources
 baseurl=http://vault.centos.org/8.2.2004/BaseOS/Source/
 gpgcheck=1
 enabled=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
-
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial<br/>
 [base-os]
 name=CentOS-8.2.2004 - Base os
 baseurl=https://vault.centos.org/8.2.2004/BaseOS/x86_64/os/
