@@ -5,3 +5,9 @@
 :set fileencoding=gb2312
 :set termencoding=utf-8
 ```
+
+#### 显示(取消)行号
+```console
+:set number     显示行号
+:set nonumber   取消行号
+```
