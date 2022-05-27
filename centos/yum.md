@@ -45,3 +45,8 @@ sudo yum makecache
 ```console
 # yum --enablerepo=epel install xxx
 ```
+
+#### 下载包不安装
+```console
+# yum install --downloadonly --downloaddir=. <package>
+```
