@@ -48,5 +48,5 @@ sudo yum makecache
 
 #### 下载包不安装
 ```console
-# yum install --downloadonly --downloaddir=. <package>
+# yum install --downloadonly --downloaddir=<path> <package>
 ```
