@@ -1,0 +1,1 @@
+https://qemu--buch-de.translate.goog/de/index.php?title=Hauptseite&_x_tr_sch=http&_x_tr_sl=de&_x_tr_tl=en&_x_tr_hl=en
