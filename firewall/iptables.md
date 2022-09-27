@@ -25,3 +25,13 @@
 # iptables -A INPUT -p tcp --dport ssh -s 10.10.10.10 -m state --state NEW,ESTABLISHED -j ACCEPT
 # iptables -A OUTPUT -p tcp --sport 22 -d 10.10.10.10 -m state --state ESTABLISHED -j ACCEPT
 ```
+
+#### 显示每个rule的编号
+```console
+iptables -L --line-numbers
+```
+
+#### 删除rule
+```console
+iptables -D INPUT <line-number>
+```
