@@ -1,12 +1,12 @@
-### Thread stop
+#### Thread stop
 [Thread stop](https://sourceware.org/gdb/onlinedocs/gdb/Thread-Stops.html#Thread-Stops)
 
-### 设置反汇编代码格式
+#### 设置反汇编代码格式
 ```console
 set disassembly-flavor intel
 ```
 
-### 打印具体地址的值 
+#### 打印具体地址的值 
 ```console
 (gdb) help x
 Examine memory: x/FMT ADDRESS.
@@ -32,4 +32,11 @@ with this command or "print".
 
 (gdb) x/tw 0x404030 (w表示打印一个word，一个word在gdb中默认为4byte)
 0x404030 <v1>:  00111111100011001100110011001101 (注意字节序)
+```
+
+#### 调试实模式bootloader代码
+```console
+gdb -ix gdb_init_real_mode.txt \
+        -ex 'set tdesc filename target.xml' \
+        -ex 'target remote localhost:1234'
 ```
