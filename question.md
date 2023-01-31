@@ -5,3 +5,5 @@
 ##### RV32IM汇编为什么同时有lh rd, imm(rs1)和lhu rd, imm(rs1)指令?
 
 ##### x86汇编中[bits 32]指令的作用？
+
+##### expand down segment

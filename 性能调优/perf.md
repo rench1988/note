@@ -35,3 +35,8 @@ call chains are analyzed
 ```console
 perf report --stdio -g graph -i ./my_test.perf.data | c++filt
 ```
+
+#### 查看程序的符号名
+```console
+perf probe –x ./load --funcs
+```

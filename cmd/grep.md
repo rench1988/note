@@ -79,3 +79,8 @@ $ grep -v "unix" geekfile.txt
 learn operating system.
 Unix linux which one you choose.
 ```
+
+8. 使用perl正则表达式
+```console
+$ grep -P "^A.*[0-9]{2}$"
+```
