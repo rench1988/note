@@ -1,4 +1,5 @@
-[原文](https://stackoverflow.com/questions/2229336/linux-application-profiling)
+#### perf源码下载地址
+https://mirrors.edge.kernel.org/pub/linux/kernel/tools/perf/
 
 #### record performance data
 ```console
@@ -39,4 +40,17 @@ perf report --stdio -g graph -i ./my_test.perf.data | c++filt
 #### 查看程序的符号名
 ```console
 perf probe –x ./load --funcs
+perf probe -x tst --funcs --no-demangle --filter '*'  (probe c++函数时使用)
+```
+
+#### 添加函数进入事件
+```console
+perf probe –x ./load main
+perf probe -x tst --add _ZN1N1fEi --no-demangle (probe c++函数时使用)
+```
+
+#### 添加函数退出事件
+```console
+perf probe –x ./load main%return
+perf probe -x tst --add _ZN1N1fEi%return --no-demangle (probe c++函数时使用)
 ```

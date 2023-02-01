@@ -11,3 +11,9 @@
 :set number     显示行号
 :set nonumber   取消行号
 ```
+
+#### tab和space转换
+```console
+set shiftwidth=4    当按回车下一行时，下一行留4个长度的space
+set ts=4  tab使用4个space长度
+```
