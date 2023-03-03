@@ -18,3 +18,13 @@ apt-cache policy package-name
 ```console
 apt-cache show package-name
 ```
+
+#### 查看deb包包含的文件
+```console
+dpkg --contents clamav-1.0.1.linux.x86_64.deb
+```
+
+#### apt
+
+
+
