@@ -7,3 +7,15 @@
 ```console
 # rpm -qf {filename}
 ```
+
+#### 删除包但不删除依赖
+```console
+rpm -e --nodeps packageA
+```
+
+#### 查询包的依赖
+```console
+rpm -qp mypackage.rpm --requires
+```
+
+
