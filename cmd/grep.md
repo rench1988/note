@@ -84,3 +84,9 @@ Unix linux which one you choose.
 ```console
 $ grep -P "^A.*[0-9]{2}$"
 ```
+
+9. 在多个文件中查找，查找结果包含匹配的文件名
+```console
+$ grep text /dev/null /usr/include/sql*.h
+```
+
