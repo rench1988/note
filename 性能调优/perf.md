@@ -14,7 +14,7 @@ perf record -p `pidof a.out` sleep 10
 
 to record with call graph
 ```console
-perf record -g -p `pidof a.out` 
+perf record -g --call-graph dwarf -p `pidof a.out` 
 ```
 
 指定输出
