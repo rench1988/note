@@ -1,5 +1,5 @@
 #### GDT
-[Global Descriptor Table](https://wiki.osdev.org/Global_Descriptor_Table)
+[Global Descriptor Table 记录了各个字段的含义](https://wiki.osdev.org/Global_Descriptor_Table)
 [Entry Format](https://www.sandpile.org/x86/desc.htm)
 
 #### IDT
