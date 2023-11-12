@@ -35,3 +35,8 @@ iptables -L --line-numbers
 ```console
 iptables -D INPUT <line-number>
 ```
+
+#### 放开指定IP的多个端口
+```
+iptables -A INPUT -p tcp -s 10.19.28.106 --match multiport --dports 445,139 -j ACCEPT
+```
