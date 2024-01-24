@@ -1,8 +1,8 @@
-#### perf源码下载地址
+##### perf源码下载地址
 https://mirrors.edge.kernel.org/pub/linux/kernel/tools/perf/<br/>
 系统自带的或者用yum安装的perf不支持python, 要自己手动编译出程序
 
-#### record performance data
+##### record performance data
 ```console
 # perf record -p `pidof a.out`
 ```
@@ -22,7 +22,7 @@ to record with call graph
 # perf record -g  -p `pidof my_test` -o ./my_test.perf.data sleep 30
 ```
 
-#### analyze performance data
+##### analyze performance data
 analyze load per module:
 ```console
 # perf report --stdio -g none --sort comm,dso -i ./my_test.perf.data
@@ -38,26 +38,31 @@ call chains are analyzed
 # perf report --stdio -g graph -i ./my_test.perf.data | c++filt
 ```
 
-#### 查看程序的符号名
+##### 跟踪系统调用
+```console
+# perf trace -t 9755 --duration 500 (跟踪线程ID为9755，并且执行时间大于500ms的系统调用)
+```
+
+##### 查看程序的符号名
 ```console
 # perf probe –x ./load --funcs
 # perf probe -x tst --funcs --no-demangle --filter '*'  (probe c++函数时使用)
 ```
 
-#### 添加函数进入事件
+##### 添加函数进入事件
 ```console
 # perf probe –x ./load main
 # perf probe -x tst --add _ZN1N1fEi --no-demangle (probe c++函数时使用)
 # perf probe -x myelf --add myalias=_SomeVeryLongMangledNameWhee (c++函数名过长时)
 ```
 
-#### 添加函数退出事件
+##### 添加函数退出事件
 ```console
 # perf probe –x ./load main%return
 # perf probe -x tst --add _ZN1N1fEi%return (probe c++函数时使用)
 ```
 
-#### 查询添加的函数
+##### 查询添加的函数
 ```console
 # perf probe -l
 probe_HAgent:MultiAuthRequest (on MultiAuthRequest@./src/HAgentFTSRecv.cpp in /home/leagsoft/SafeDataExchange/Bin/HAgent)
@@ -69,7 +74,7 @@ probe_HAgent:MultiAuthRequest__return (on MultiAuthRequest%return@./src/HAgentFT
 # perf probe -v --line  _ZN7CDBOper10ExecuteSQLEP11otl_connectiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE -x ./program  (查询trace-point对应的代码行号)
 ```
 
-#### perf脚本示例
+##### perf脚本示例
 ```console
 from __future__ import print_function
   
