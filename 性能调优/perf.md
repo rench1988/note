@@ -5,6 +5,7 @@ https://mirrors.edge.kernel.org/pub/linux/kernel/tools/perf/<br/>
 ##### record performance data
 ```console
 # perf record -p `pidof a.out`
+# perf record -e probe_HAgent:* -aR sleep 1000 (指定事件)
 ```
 
 to record for 10 secs
@@ -69,9 +70,14 @@ probe_HAgent:MultiAuthRequest (on MultiAuthRequest@./src/HAgentFTSRecv.cpp in /h
 probe_HAgent:MultiAuthRequest__return (on MultiAuthRequest%return@./src/HAgentFTSRecv.cpp in /home/leagsoft/SafeDataExchange/Bin/HAgent)
 ```
 
-#### 查询trace-point事件
+##### 查询trace-point事件
 ```console
 # perf probe -v --line  _ZN7CDBOper10ExecuteSQLEP11otl_connectiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE -x ./program  (查询trace-point对应的代码行号)
+```
+
+##### 根据perf.data生成python脚本
+```console
+perf script --gen-script python  
 ```
 
 ##### perf脚本示例
