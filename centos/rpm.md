@@ -18,4 +18,8 @@ rpm -e --nodeps packageA
 rpm -qp mypackage.rpm --requires
 ```
 
+#### 获取rpm包内容不安装
+```console
+rpm2cpio php-5.1.4-1.esp1.x86_64.rpm | cpio -idmv
+```
 
