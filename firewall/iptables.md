@@ -36,6 +36,12 @@ iptables -L --line-numbers
 iptables -D INPUT <line-number>
 ```
 
+#### 放开某个IP
+```console
+/sbin/iptables -A INPUT -p tcp -s XXX.XXX.XXX.XXX -j ACCEPT
+/sbin/iptables -A OUTPUT -p tcp -d  XXX.XXX.XXX.XXX -j ACCEPT
+```
+
 #### 放开指定IP的多个端口
 ```
 iptables -A INPUT -p tcp -s 10.19.28.106 --match multiport --dports 445,139 -j ACCEPT
